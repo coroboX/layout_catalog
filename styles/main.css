@@ -151,6 +151,7 @@ h3 {
   margin: 0; }
 
 .main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,8 +167,9 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
   max-width: 944px;
-  height: 856px;
+  min-height: 856px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
