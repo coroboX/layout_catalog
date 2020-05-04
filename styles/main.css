@@ -1,55 +1,77 @@
 .header {
   font-weight: 500;
-  height: 60px;
   padding: 0 50px 0 40px;
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
   .header__logo, .header__link {
     display: inline-block; }
   .header__logo {
-    margin: 10px; }
+    margin: 10px 10px 7px; }
 
-.nav {
-  float: right; }
+.nav__list {
+  width: 760px;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.nav__item {
+  list-style: none; }
+
+.nav__link {
+  color: #000;
+  font-size: 1rem;
+  line-height: 14px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  height: 12px;
+  padding: 23px 0; }
+
+.nav__link:hover, .nav__link--active {
+  color: #00acdc; }
+
+.nav__link--active {
+  position: relative; }
+
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  top: 56px;
+  border-radius: 2px;
+  background-color: #00acdc; }
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 0 3vw; }
   .nav__list {
-    width: 760px;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    width: calc(90vw - 40px);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .nav__item {
-    list-style: none; }
-  .nav__link {
-    color: #000;
-    font-size: 1rem;
-    line-height: 14px;
-    font-style: normal;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    height: 12px;
-    padding: 23px 0; }
-  .nav__link:hover, .nav__link--active {
-    color: #00acdc; }
-  .nav__link--active {
-    position: relative; }
-  .nav__link--active::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    top: 56px;
-    border-radius: 2px;
-    background-color: #00acdc; }
+    margin: 0 10px;
+    max-width: 100px; } }
 
 .product-card {
   font-size: 11px;
